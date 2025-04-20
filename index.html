@@ -1,122 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ayush Gairola - The Tarnished Resume</title>
-    <style>
-      body {
-        font-family: 'Cinzel', serif;
-        background-color: #111;
-        background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
-        background-blend-mode: multiply;
-        color: #d4af37;
-        margin: 20px;
-        line-height: 1.6;
-        position: relative;
-        padding: 2rem;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Gairola - The Tarnished Resume</title>
+  <style>
+    body {
+      font-family: 'Cinzel', serif;
+      background-color: #111;
+      background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
+      background-blend-mode: multiply;
+      color: #d4af37;
+      margin: 20px;
+      line-height: 1.6;
+      position: relative;
+      padding: 2rem;
+    }
 
-      h1, p, ul {
-        text-align: center;
+    h1, p, ul {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #d4af37, 0 0 5px #f8e7b5;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    li:nth-child(1) { animation-delay: 0.2s; }
+    li:nth-child(2) { animation-delay: 0.4s; }
+    li:nth-child(3) { animation-delay: 0.6s; }
+    li:nth-child(4) { animation-delay: 0.8s; }
+    li:nth-child(5) { animation-delay: 1s; }
+
+    a {
+      text-decoration: none;
+      color: #d4af37;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #f8e7b5;
+      text-shadow: 0 0 5px #f8e7b5, 0 0 15px #d4af37;
+    }
+
+    body:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 10px solid rgba(212, 175, 55, 0.5);
+      pointer-events: none;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* ASCII Art */
+    .ascii {
+      font-family: monospace;
+      text-align: center;
+      color: #888;
+      margin-bottom: 30px;
+      white-space: pre;
+      overflow-x: auto; /* Add horizontal scroll for small screens */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
       }
 
       h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        text-shadow: 0 0 20px #d4af37, 0 0 5px #f8e7b5;
+        font-size: 2rem;
       }
 
       p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+        font-size: 1rem;
       }
 
       ul {
-        list-style: none;
-        padding: 0;
+        margin: 0;
       }
 
-      li {
-        margin: 10px 0;
-        opacity: 0;
-        animation: fadeIn 1s ease-in forwards;
-      }
-
-      li:nth-child(1) { animation-delay: 0.2s; }
-      li:nth-child(2) { animation-delay: 0.4s; }
-      li:nth-child(3) { animation-delay: 0.6s; }
-      li:nth-child(4) { animation-delay: 0.8s; }
-      li:nth-child(5) { animation-delay: 1s; }
-
-      a {
-        text-decoration: none;
-        color: #d4af37;
-        font-weight: bold;
-        transition: all 0.3s ease;
-      }
-
-      a:hover {
-        color: #f8e7b5;
-        text-shadow: 0 0 5px #f8e7b5, 0 0 15px #d4af37;
-      }
-
-      body:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border: 10px solid rgba(212, 175, 55, 0.5);
-        pointer-events: none;
-      }
-
-      @keyframes fadeIn {
-        to { opacity: 1; }
-      }
-
-      /* ASCII Art */
       .ascii {
-        font-family: monospace;
-        text-align: center;
-        color: #888;
-        margin-bottom: 30px;
-        white-space: pre;
+        font-size: 0.9rem; /* Reduce font size for ASCII art */
       }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="ascii">
-      ________              ________       .__           .__       <br>
-     /  _____/  ____  ____ \\_____  \\    __|__| ________ |__| ____ <br>
-    /   \\  ____/ __ \\/ __ \\ /   |   \\  / __ |  \\___   / |  |/ __ \\<br>
-    \\    \\_\\  \\  ___/\\  ___//    |    \\/ /_/ |   /    /  |  \\  ___/<br>
-     \\______  /\\___  >\\___  >_______  /\\____ |  /_____ \\ |__|\\___  ><br>
-            \\/     \\/     \\/        \\/      \\/        \\/         \\/ <br>
-    </div>
+    }
 
-    <h1>Greetings, Tarnished!</h1>
-    <p>You have embarked upon an ancient quest—stumbling across this API resume forged in the fires of ambition.</p>
-    <p>To navigate this realm of knowledge, follow the runes below:</p>
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
 
-    <ul>
-      <li>
-        <a href="/api/ayush/resume" title="The ancient scroll of skills and experience">📜 Resume of the Tarnished</a>
-      </li>
-      <li>
-        <a href="/api/ayush/projects" title="Mystic runes of forgotten code and lore">🛠️ Runes of Forgotten Projects</a>
-      </li>
-      <li>
-        <a href="/api/ayush/about" title="The chronicles and birthright of Ayush">📖 Chronicles of Ayush</a>
-      </li>
-      <li>
-        <a href="/api/ayush/contact" title="Use the summoning bell to reach out">🔔 Summon the Tarnished</a>
-      </li>
-      <li>
-        <a href="/api/bye-bye" title="Return to the fog beyond this realm">🌫️ Farewell to the Lands Between</a>
-      </li>
-    </ul>
-  </body>
+      p {
+        font-size: 0.9rem;
+      }
+
+      ul li {
+        font-size: 0.9rem;
+      }
+
+      .ascii {
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="ascii">
+    ________              ________       .__           .__       <br>
+   /  _____/  ____  ____ \\_____  \\    __|__| ________ |__| ____ <br>
+  /   \\  ____/ __ \\/ __ \\ /   |   \\  / __ |  \\___   / |  |/ __ \\<br>
+  \\    \\_\\  \\  ___/\\  ___//    |    \\/ /_/ |   /    /  |  \\  ___/<br>
+   \\______  /\\___  >\\___  >_______  /\\____ |  /_____ \\ |__|\\___  ><br>
+          \\/     \\/     \\/        \\/      \\/        \\/         \\/ <br>
+  </div>
+
+  <h1>Greetings, Tarnished!</h1>
+  <p>You have embarked upon an ancient quest—stumbling across this API resume forged in the fires of ambition.</p>
+  <p>To navigate this realm of knowledge, follow the runes below:</p>
+
+  <ul>
+    <li>
+      <a href="/api/ayush/resume" title="The ancient scroll of skills and experience">📜 Resume of the Tarnished</a>
+    </li>
+    <li>
+      <a href="/api/ayush/projects" title="Mystic runes of forgotten code and lore">🛠️ Runes of Forgotten Projects</a>
+    </li>
+    <li>
+      <a href="/api/ayush/about" title="The chronicles and birthright of Ayush">📖 Chronicles of Ayush</a>
+    </li>
+    <li>
+      <a href="/api/ayush/contact" title="Use the summoning bell to reach out">🔔 Summon the Tarnished</a>
+    </li>
+    <li>
+      <a href="/api/bye-bye" title="Return to the fog beyond this realm">🌫️ Farewell to the Lands Between</a>
+    </li>
+  </ul>
+</body>
 </html>
