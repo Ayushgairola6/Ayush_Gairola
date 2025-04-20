@@ -75,7 +75,7 @@ server.get("/api/ayush/projects", async (req, rep) => {
         const html = `
         <html>
           <head>
-            <title>📜 Resume of the Tarnished</title>
+            <title>📜 Missions of the Tarnished</title>
             <style>
               body {
                 background-color: #0d0d0d;
@@ -110,7 +110,7 @@ server.get("/api/ayush/about", (req, rep) => {
         const html = `
         <html>
           <head>
-            <title>📜 Resume of the Tarnished</title>
+            <title>📜 About the Tarnished</title>
             <style>
               body {
                 background-color: #0d0d0d;
@@ -143,7 +143,7 @@ server.get("/api/ayush/contact", (req, rep) => {
         const html = `
         <html>
           <head>
-            <title>📜 Resume of the Tarnished</title>
+            <title>📜 Contact of the Tarnished</title>
             <style>
               body {
                 background-color: #0d0d0d;
