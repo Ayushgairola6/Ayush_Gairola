@@ -186,5 +186,5 @@ server.listen({ port: process.env.PORT, host: '0.0.0.0' }, err => {
       console.error(err);
       process.exit(1);
     }
-    console.log(`Server running on http://0.0.0.0:${PORT}`);
+    console.log(`Server running on http://0.0.0.0:${process.env.PORT}`);
   });
