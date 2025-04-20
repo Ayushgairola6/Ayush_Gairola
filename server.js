@@ -8,6 +8,8 @@ import resume from './resume.json' with { type: "json" };
 import projects from './projects.json' with {type: "json"};
 import about from './about.json' with {type: 'json'};
 import contact from './contact.json' with {type: 'json'};
+import { readFile } from "fs/promises";
+import path from "path";
 const server = Fastify();
 
 await server.register(cors, {
@@ -18,20 +20,11 @@ await server.register(cors, {
 
 
 // 
-server.get("/", (req, rep) => {
+server.get("/", async (req, rep) => {
     try {
-        rep.send({
-            Message:
-                "Greetings Stranger! I see you've stumbled upon this API resume quest. You might be thinking that I'm trying to be innovative, but honestly, I'm just a bit lazy to create fancy 45-degree floating marquee animations. You can proceed to explore the following routes:",
-            routes: [
-                { resume: "/api/ayush/resume" },
-                { projects: "/api/ayush/projects" },
-                { about: "/api/ayush/about" },
-                { contact: "/api/ayush/contact" },
-                { end: "api/bye-bye" },
-            ]
-
-        });
+        const filePath = path.resolve("index.html");
+        const htmlContent = await readFile(filePath, "utf8");
+        rep.type("text/html").send(htmlContent);
 
 
 
@@ -42,7 +35,33 @@ server.get("/", (req, rep) => {
 // send resume as json 
 server.get("/api/ayush/resume", async (req, rep) => {
     try {
-        return rep.send(resume);
+        const prettyJson = JSON.stringify(resume, null, 2);
+
+        const html = `
+          <html>
+            <head>
+              <title>📜 Resume of the Tarnished</title>
+              <style>
+                body {
+                  background-color: #0d0d0d;
+                  color: #00ffcc;
+                  font-family: monospace;
+                  padding: 20px;
+                }
+                pre {
+                  white-space: pre-wrap;
+                  word-wrap: break-word;
+                }
+              </style>
+            </head>
+            <body>
+              <h1>📜 Resume of the Tarnished</h1>
+              <pre>${prettyJson}</pre>
+            </body>
+          </html>
+        `;
+
+        rep.type('text/html').send(html);
     } catch (error) {
         console.log(error);
     }
@@ -52,7 +71,32 @@ server.get("/api/ayush/resume", async (req, rep) => {
 // send projects as json
 server.get("/api/ayush/projects", async (req, rep) => {
     try {
-        return rep.send(projects);
+        const prettyJson = JSON.stringify(projects, null, 2);
+        const html = `
+        <html>
+          <head>
+            <title>📜 Resume of the Tarnished</title>
+            <style>
+              body {
+                background-color: #0d0d0d;
+                color: #00ffcc;
+                font-family: monospace;
+                padding: 20px;
+              }
+              pre {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+              }
+            </style>
+          </head>
+          <body>
+            <h1>📜 Resume of the Tarnished</h1>
+            <pre>${prettyJson}</pre>
+          </body>
+        </html>
+      `;
+
+        rep.type('text/html').send(html);
 
     } catch (error) {
         console.log(error);
@@ -62,7 +106,32 @@ server.get("/api/ayush/projects", async (req, rep) => {
 //about me 
 server.get("/api/ayush/about", (req, rep) => {
     try {
-        return rep.send(about)
+        const prettyJson = JSON.stringify(about, null, 2);
+        const html = `
+        <html>
+          <head>
+            <title>📜 Resume of the Tarnished</title>
+            <style>
+              body {
+                background-color: #0d0d0d;
+                color: #00ffcc;
+                font-family: monospace;
+                padding: 20px;
+              }
+              pre {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+              }
+            </style>
+          </head>
+          <body>
+            <h1>📜 Resume of the Tarnished</h1>
+            <pre>${prettyJson}</pre>
+          </body>
+        </html>
+      `;
+
+        rep.type('text/html').send(html);
     } catch (error) {
         console.log(error);
     }
@@ -70,28 +139,52 @@ server.get("/api/ayush/about", (req, rep) => {
 // contact 
 server.get("/api/ayush/contact", (req, rep) => {
     try {
-        return rep.send(contact)
+        const prettyJson = JSON.stringify(contact, null, 2);
+        const html = `
+        <html>
+          <head>
+            <title>📜 Resume of the Tarnished</title>
+            <style>
+              body {
+                background-color: #0d0d0d;
+                color: #00ffcc;
+                font-family: monospace;
+                padding: 20px;
+              }
+              pre {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+              }
+            </style>
+          </head>
+          <body>
+            <h1>📜 Resume of the Tarnished</h1>
+            <pre>${prettyJson}</pre>
+          </body>
+        </html>
+      `;
+
+        rep.type('text/html').send(html);
     } catch (error) {
         console.log(error);
     }
 })
 //end message
-server.get("/api/bye-bye", (req, rep) => {
+server.get("/api/bye-bye", async (req, rep) => {
     try {
-        return rep.send({
-            Sayonara:
-                "I see you have finished your quest; I am very glad, and I hope we see each other soon."
-        })
+        const filePath = path.resolve("end.html");
+        const htmlContent = await readFile(filePath, "utf8");
+        rep.type("text/html").send(htmlContent);
     } catch (error) {
         console.log(error);
     }
 })
 
 // fastify takes port object instead of a number
-server.listen({ port: process.env.PORT }, err => {
+server.listen({ port: PORT, host: '0.0.0.0' }, err => {
     if (err) {
-        console.error(err);
-        process.exit(1);
+      console.error(err);
+      process.exit(1);
     }
-    console.log('Server running on http://localhost:1000');
-});
+    console.log(`Server running on http://0.0.0.0:${PORT}`);
+  });
