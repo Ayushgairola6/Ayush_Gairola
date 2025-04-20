@@ -76,7 +76,7 @@ server.get("/api/ayush/contact", (req, rep) => {
     }
 })
 //end message
-server.get("api/bye-bye", (req, rep) => {
+server.get("/api/bye-bye", (req, rep) => {
     try {
         return rep.send({
             Sayonara:
