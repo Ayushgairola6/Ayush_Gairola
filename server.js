@@ -181,7 +181,7 @@ server.get("/api/bye-bye", async (req, rep) => {
 })
 
 // fastify takes port object instead of a number
-server.listen({ port: PORT, host: '0.0.0.0' }, err => {
+server.listen({ port: process.env.PORT, host: '0.0.0.0' }, err => {
     if (err) {
       console.error(err);
       process.exit(1);
