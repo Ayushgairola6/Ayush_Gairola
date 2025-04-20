@@ -1,0 +1,165 @@
+{
+    "name": "Ayush Gairola",
+    "title": "Full Stack Web Developer",
+    "location": "Dehradun, India",
+    "contact": {
+        "phone": "+91 8126687562",
+        "email": "Ayushgairola2002@gmail.com",
+        "links": {
+            "linkedin": "www.linkedin.com/in/ayush-gairola-7a536a327",
+            "github": "https://github.com/Ayushgairola6",
+            "portfolio": "https://Ayushgairola.vercel.app",
+            "instagram": "https://www.instagram.com/that_man_006",
+            "X": "https://x.com/AyushGairo14362"
+        }
+    },
+    "original_resume_link": "https://docs.google.com/document/d/1d3Vj_OG_TpIrgMRtNWxS1IA_Y1XSYzF_73BFnKVkt5o/edit?usp=drive_link",
+    "summary": "Self-taught full-stack developer with hands-on experience in building production-grade applications using modern web technologies. Led backend development at a US-based startup and shipped multiple platforms from scratch. Passionate about building scalable systems, real-time features, and impactful user experiences.",
+    "highlights": [
+        "Led backend for a US-based startup, improving performance by 30%",
+        "Built 4+ real-world full-stack apps with modern tech",
+        "Reduced query load and response times by up to 40%"
+    ],
+    "skills": {
+        "frontend": [
+            "Next.js",
+            "React.js",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "backend": [
+            "Node.js",
+            "Express.js",
+            "RESTful APIs",
+            "WebSockets (Socket.io)"
+        ],
+        "databases": [
+            "MongoDB",
+            "MySQL",
+            "PostgreSQL",
+            "Firebase Storage",
+            "Supabase"
+        ],
+        "tools": [
+            "Git",
+            "GitHub",
+            "Axios",
+            "Postman",
+            "Aiven",
+            "JWT Auth"
+        ],
+        "architecture": [
+            "MVC",
+            "Microservices",
+            "Clean Code Practices"
+        ],
+        "softSkills": [
+            "Problem-solving",
+            "Communication",
+            "Team Leadership",
+            "Time Management"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Extendedleafs Inc.",
+            "location": "Remote, USA",
+            "title": "Lead Backend Developer",
+            "duration": "Jan 2025 – Present",
+            "achievements": [
+                "Promoted from intern to lead developer within 2 months",
+                "Spearheaded key backend systems using Node.js, PostgreSQL, and microservices",
+                "Enhanced application performance and scalability by 30%"
+            ]
+        },
+        {
+            "company": "Nova Nectar",
+            "location": "Remote, India",
+            "title": "Full Stack Developer Intern",
+            "duration": "April 2025 – Present",
+            "achievements": [
+                "Worked on various UI components using React and Tailwind",
+                "Improved user experience, increasing usage time by 20%"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Surge – Blog & Social Networking Platform",
+            "techStack": [
+                "Next.js",
+                "Node.js",
+                "MySQL",
+                "Firebase",
+                "Redux Toolkit"
+            ],
+            "description": [
+                "SSR-based app with fast load times; optimized queries for 25% faster data retrieval",
+                "Built live chat and unique user connection features with Socket.io"
+            ],
+            "status": "Live project",
+            "link": "https://surge-lake.vercel.app",
+            "github_repo": "https://github.com/Ayushgairola6/Surge.git"
+        },
+        {
+            "name": "MendAI – AI Therapy Assistant",
+            "techStack": [
+                "React.js",
+                "Node.js",
+                "PostgreSQL",
+                "Gemini API"
+            ],
+            "description": [
+                "Created a context-aware chat assistant using Google's Gemini API",
+                "Used a database-based interval method to provide context to the LLM",
+                "Added session memory and efficient SQL data handling for chat history"
+            ],
+            "status": "Live project",
+            "link": "https://mendai.netlify.app",
+            "github_repo": "https://github.com/Ayushgairola6/MendAI.git"
+        },
+        {
+            "name": "Yibee – Music Streaming & Social Network",
+            "techStack": [
+                "React.js",
+                "Node.js",
+                "MongoDB",
+                "Firebase",
+                "Redux Toolkit"
+            ],
+            "description": [
+                "Developed a hybrid music and social platform with playlist features and real-time interaction",
+                "Optimized MongoDB queries to reduce music loading time by 35%"
+            ],
+            "status": "Live project",
+            "link": "https://yibee-frontend.vercel.app",
+            "github_repo": "https://github.com/Ayushgairola6/Yibee.git"
+        }
+    ],
+    "hackathons": [
+        {
+            "name": "PeerList Hackathon (2024)",
+            "project": "Yibee",
+            "status": "Live project"
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor's in Humanities",
+            "institution": "Uttarakhand Open University",
+            "duration": "2021–2024"
+        },
+        {
+            "degree": "Diploma in Civil Engineering",
+            "institution": "UBTE",
+            "duration": "2019–2021"
+        },
+        {
+            "degree": "Self-Taught Developer",
+            "description": "Learned web development via online docs, YouTube, and building real projects"
+        }
+    ]
+}

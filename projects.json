@@ -1,0 +1,72 @@
+{
+    "Surge": {
+        "name": "Surge",
+        "link": "https://surge-lake.vercel.app",
+        "github_repo": "https://github.com/Ayushgairola6/Surge.git",
+        "thumbnail": "",
+        "description": "Surge is a networking platform specifically designed for individuals seeking dating-related advice. It provides a focused, niche environment where users can access various tips and guidance without having to search multiple sources. The platform organizes posts into categories like 'Red Flags', 'Green Flags', and 'First Date Stories', making it easier for users to explore and learn about different aspects of dating. Additionally, a real-time communication feature using socket.io allows users to connect with people whose posts they find the most engaging, adding a personal touch.",
+        "tech_stack": [
+            "Next.js",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "Firebase",
+            "MySQL",
+            "socket.io",
+            "Supabase",
+            "Postman"
+        ]
+    },
+    "MendAI": {
+        "name": "MendAI",
+        "link": "https://mendai.netlify.app",
+        "github_repo": "https://github.com/Ayushgairola6/MendAI.git",
+        "thumbnail": "",
+        "description": "MendAI is an AI-powered companion designed for individuals who struggle to share their thoughts and feelings. Whether due to shyness, introversion, or fear of judgment, MendAI acts as a virtual friend that listens empathetically to everything users express. It provides responses based on emotion detection, fostering a supportive environment for self-expression. The platform also includes real-time communication with socket.io along with JWT and OAuth-based authentication using cookies for secure data transactions. (Currently in beta stage)",
+        "tech_stack": [
+            "React.js",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "Firebase",
+            "PostgreSQL",
+            "socket.io",
+            "Supabase",
+            "Postman"
+        ]
+    },
+    "Yibee": {
+        "name": "Yibee",
+        "link": "https://yibee-frontend.vercel.app",
+        "github_repo": "https://github.com/Ayushgairola6/Yibee.git",
+        "thumbnail": "",
+        "description": "Yibee is an innovative combination of social networking and music streaming platforms. It aims to address attention retention challenges by allowing users to listen to music and share updates within a single app, thereby reducing the need to switch between multiple applications. Yibee also employs a JWT-based authentication system to ensure secure data transfers.",
+        "tech_stack": [
+            "React.js",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "Firebase",
+            "MongoDB",
+            "Postman"
+        ]
+    },
+    "MendAI_mobile_app": {
+        "description": "The mobile app version of MendAI offers a more convenient way for users to interact with their AI companion. By eliminating the need to open a browser, the app enhances the user experience, making it easier for individuals to converse and share their thoughts seamlessly.",
+        "tech_stack": [
+            "React Native",
+            "socket.io (using the same server as the web version)"
+        ]
+    },
+    "Miscellaneous": {
+        "link": "https://github.com/Ayushgairola6/",
+        "description": "This section includes various miscellaneous projects undertaken for learning purposes or as creative endeavors for entertainment.",
+        "tech_stack": [
+            "React",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Tailwind CSS"
+        ]
+    }
+}
