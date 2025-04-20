@@ -90,7 +90,7 @@ server.get("/api/ayush/projects", async (req, rep) => {
             </style>
           </head>
           <body>
-            <h1>📜 Resume of the Tarnished</h1>
+            <h1>📜 Missions of the Tarnished</h1>
             <pre>${prettyJson}</pre>
           </body>
         </html>
@@ -125,7 +125,7 @@ server.get("/api/ayush/about", (req, rep) => {
             </style>
           </head>
           <body>
-            <h1>📜 Resume of the Tarnished</h1>
+            <h1>📜 About  the Tarnished</h1>
             <pre>${prettyJson}</pre>
           </body>
         </html>
@@ -158,7 +158,7 @@ server.get("/api/ayush/contact", (req, rep) => {
             </style>
           </head>
           <body>
-            <h1>📜 Resume of the Tarnished</h1>
+            <h1>📜 Contact of the Tarnished</h1>
             <pre>${prettyJson}</pre>
           </body>
         </html>
